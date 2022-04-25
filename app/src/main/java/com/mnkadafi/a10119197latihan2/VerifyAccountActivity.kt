@@ -11,20 +11,20 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 
-class AlmostThereActivity : AppCompatActivity(), View.OnClickListener {
+class VerifyAccountActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
-        setContentView(R.layout.activity_almost_there)
+        setContentView(R.layout.activity_verifity_account)
 
-        val btnMoveToVerifityAccountActivity: TextView = findViewById(R.id.btnVerify)
-        btnMoveToVerifityAccountActivity.setOnClickListener(this)
+        val btnMoveToMainActivity: TextView = findViewById(R.id.btnSendCode)
+        btnMoveToMainActivity.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when(v?.id) {
-            R.id.btnVerify -> {
-                val moveIntent = Intent(this@AlmostThereActivity, VerifyAccountActivity::class.java)
+            R.id.btnSendCode -> {
+                val moveIntent = Intent(this@VerifyAccountActivity, MainActivity::class.java)
                 startActivity(moveIntent)
             }
         }
