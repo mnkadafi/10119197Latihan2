@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--25 April 2022-->
+<!--10119197-->
+<!--Mochamad Nurkhayal Kadafi-->
+<!--IF-5-->
+
+<resources>
+    <string-array name="daftar_gol_darah">
+        <item>Blood Type</item>
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+    <string-array name="daftar_rhesus">
+        <item>Rhesus</item>
+        <item>A</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="daftar_job">
+        <item>Job</item>
+        <item>Doctor</item>
+        <item>Nurse</item>
+        <item>Artist</item>
+        <item>Student</item>
+    </string-array>
+</resources>

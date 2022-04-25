@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--25 April 2022-->
+<!--10119197-->
+<!--Mochamad Nurkhayal Kadafi-->
+<!--IF-5-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".AlmostThereActivity">
+
+    <TextView
+        android:id="@+id/tvAlmostThere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen200"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="@dimen/dimen38"
+        android:text="@string/almostThere"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen15"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen16"
+        android:textAlignment="center"
+        android:text="@string/description_verify_1"
+        app:layout_constraintStart_toStartOf="@id/tvAlmostThere"
+        app:layout_constraintEnd_toEndOf="@id/tvAlmostThere"
+        app:layout_constraintTop_toBottomOf="@id/tvAlmostThere"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnVerify"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen60"
+        android:layout_marginRight="@dimen/dimen30"
+        android:layout_marginLeft="@dimen/dimen30"
+        style="@style/btnMain1"
+        android:text="@string/verify"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

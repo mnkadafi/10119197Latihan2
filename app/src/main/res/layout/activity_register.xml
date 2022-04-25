@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--25 April 2022-->
+<!--10119197-->
+<!--Mochamad Nurkhayal Kadafi-->
+<!--IF-5-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/ic_header">
+
+            <ImageView
+                android:id="@+id/icBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_header_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                style="@style/textStyle1"
+                android:text="@string/register" />
+        </Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dimen10"
+            android:layout_marginLeft="@dimen/dimen24"
+            android:layout_marginRight="@dimen/dimen24">
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editText2"
+                android:hint="@string/plcUsername" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editText2"
+                android:hint="@string/plcEmail" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editText2"
+                android:hint="@string/plcPhone" />
+
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen5"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen15"
+                    android:text="@string/gender1"
+                    android:checked="true"
+                    android:layout_weight="50"
+                    android:layout_marginLeft="@dimen/dimen25"/>
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen15"
+                    android:text="@string/gender2"
+                    android:layout_marginRight="@dimen/dimen50"/>
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dimen5">
+                <Spinner
+                    android:id="@+id/spGolDarah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen40"
+                    android:entries="@array/daftar_gol_darah">
+                </Spinner>
+                <Spinner
+                    android:id="@+id/spReshus"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen40"
+                    android:layout_marginLeft="@dimen/dimen75"
+                    android:entries="@array/daftar_rhesus">
+                </Spinner>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editText2"
+                android:hint="@string/plcPassword" />
+
+            <EditText
+                android:id="@+id/etRetypePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editText2"
+                android:hint="@string/plcRetypePassword" />
+
+            <RadioGroup
+                android:id="@+id/typeUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rbPersonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen15"
+                    android:checked="true"
+                    android:text="@string/personalType"
+                    android:layout_weight="50"
+                    android:layout_marginLeft="@dimen/dimen25"/>
+                <RadioButton
+                    android:id="@+id/rbOrganization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen15"
+                    android:text="@string/organizationType"
+                    android:layout_marginRight="@dimen/dimen20"/>
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/spJob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editText2"
+                android:entries="@array/daftar_job">
+            </Spinner>
+
+            <EditText
+                android:id="@+id/etHomeAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editText2"
+                android:hint="@string/plcHomeAddress" />
+
+            <EditText
+                android:id="@+id/etDefaultLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editText2"
+                android:drawableRight="@drawable/ic_blood_needed_location"
+                android:hint="@string/plcDefaultLocation" />
+
+            <CheckBox
+                android:id="@+id/cbAgree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                style="@style/cbStyle"
+                android:text="@string/agree_with_terms_and_conditions"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/btnMain2"
+                android:text="@string/register"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,51 @@
+
+<!--25 April 2022-->
+<!--10119197-->
+<!--Mochamad Nurkhayal Kadafi-->
+<!--IF-5-->
+
+<resources>
+    <string name="app_name">10119197Latihan2</string>
+    <string name="logo_company">Logo Company</string>
+    <string name="plcUsername">Username</string>
+    <string name="plcPassword">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="btnFacebook">Connect With Facebook</string>
+    <string name="infoRegister">doesn\'t have account ?</string>
+    <string name="plcEmail">Email</string>
+    <string name="plcPhone">Phone Number</string>
+    <string name="gender1">Male</string>
+    <string name="gender2">Female</string>
+    <string name="plcRetypePassword">Retype Password</string>
+    <string name="personalType">Personal</string>
+    <string name="organizationType">Organization</string>
+    <string name="plcHomeAddress">HomeAddress</string>
+    <string name="plcDefaultLocation">Default Location</string>
+    <string name="agree_with_terms_and_conditions">Agree with Terms and Conditions</string>
+    <string name="almostThere">Almost There</string>
+    <string name="description_verify_1">Thank you for registering with us. One more \nstep, you need to check your email \nto active your account</string>
+    <string name="verify">Verify</string>
+    <string name="verifyAccount">Verify your Account</string>
+    <string name="description_verify_2">We have send verification code to your email</string>
+    <string name="plcVerificationCode">enter verification code here...</string>
+    <string name="send_code">Send</string>
+    <string name="infoCodeVerify">doesn\'t get the code ?</string>
+    <string name="resend">Resend</string>
+    <string name="user_name">Mochamad Nurkhayal Kadafi</string>
+    <string name="user_blood_type">Blood Type : O</string>
+    <string name="_75">75</string>
+    <string name="_100">100</string>
+    <string name="_330">330</string>
+    <string name="blood_give">Blood Give</string>
+    <string name="blood_received">Blood Received</string>
+    <string name="thanks">Thanks</string>
+    <string name="search_donor">Search Donor</string>
+    <string name="search_donor_near_you">Search donor near you</string>
+    <string name="blood_needed">Blood Needed</string>
+    <string name="_4_users_need_blood">4 Users need blood</string>
+    <string name="message">Message</string>
+    <string name="_5_new_messages">5 New Messages</string>
+    <string name="donor_history">Donor History</string>
+    <string name="_5_gives_2_received">5 Gives, 2 Received</string>
+</resources>

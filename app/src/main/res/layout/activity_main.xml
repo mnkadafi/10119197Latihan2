@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--25 April 2022-->
+<!--10119197-->
+<!--Mochamad Nurkhayal Kadafi-->
+<!--IF-5-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abDetail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen130"
+        android:background="@drawable/ic_header_profile"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/cToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen130"
+            app:contentScrim="?colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tbBtn"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen16"
+                    android:layout_marginEnd="@dimen/dimen16">
+
+                    <ImageView
+                        android:id="@+id/icSideMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_side_menu"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/icNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_notification"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nscDetailProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:behavior_overlapTop="@dimen/dimen45"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen80">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civProfile"
+                android:layout_width="@dimen/dimen100"
+                android:layout_height="@dimen/dimen100"
+                android:elevation="@dimen/dimen5"
+                android:src="@drawable/foto_profile"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="@dimen/dimen4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvUserFullName"
+                style="@style/textStyleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16"
+                android:text="@string/user_name"
+                app:layout_constraintEnd_toEndOf="@+id/civProfile"
+                app:layout_constraintStart_toStartOf="@+id/civProfile"
+                app:layout_constraintTop_toBottomOf="@+id/civProfile" />
+
+            <TextView
+                android:id="@+id/tvUserBloodType"
+                style="@style/textStyleSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                android:text="@string/user_blood_type"
+                app:layout_constraintEnd_toEndOf="@+id/tvUserFullName"
+                app:layout_constraintStart_toStartOf="@+id/tvUserFullName"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserFullName" />
+
+            <View
+                android:id="@+id/separator1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen1"
+                android:layout_marginTop="@dimen/dimen10"
+                style="@style/separator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserBloodType" />
+
+            <TextView
+                android:id="@+id/tvUserBloodGive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10"
+                style="@style/titleSum"
+                android:text="@string/_75"
+                app:layout_constraintEnd_toStartOf="@+id/tvUserBloodReceived"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator1" />
+
+            <TextView
+                android:id="@+id/tvUserBloodReceived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10"
+                style="@style/titleSum"
+                android:text="@string/_100"
+                app:layout_constraintEnd_toStartOf="@+id/tvUserThanks"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvUserBloodGive"
+                app:layout_constraintTop_toBottomOf="@+id/separator1" />
+
+            <TextView
+                android:id="@+id/tvUserThanks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10"
+                style="@style/titleSum"
+                android:text="@string/_330"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvUserBloodReceived"
+                app:layout_constraintTop_toBottomOf="@+id/separator1" />
+
+            <TextView
+                android:id="@+id/tvTitleBloodGive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                style="@style/titleSumInfo"
+                android:text="@string/blood_give"
+                app:layout_constraintEnd_toEndOf="@+id/tvUserBloodGive"
+                app:layout_constraintStart_toStartOf="@+id/tvUserBloodGive"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserBloodGive" />
+
+            <TextView
+                android:id="@+id/tvTitleBloodReceived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                style="@style/titleSumInfo"
+                android:text="@string/blood_received"
+                app:layout_constraintEnd_toEndOf="@+id/tvUserBloodReceived"
+                app:layout_constraintStart_toStartOf="@+id/tvUserBloodReceived"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserBloodReceived" />
+
+            <TextView
+                android:id="@+id/tvTitleThanks"
+                style="@style/titleSumInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                android:text="@string/thanks"
+                app:layout_constraintEnd_toEndOf="@+id/tvUserThanks"
+                app:layout_constraintStart_toStartOf="@+id/tvUserThanks"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserThanks" />
+
+            <View
+                android:id="@+id/separator2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen1"
+                android:layout_marginTop="@dimen/dimen15"
+                style="@style/separator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleBloodGive" />
+
+            <ImageView
+                android:id="@+id/ivSearchDonor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen20"
+                app:layout_constraintEnd_toStartOf="@+id/ivBloodNeeded"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator2"
+                app:srcCompat="@drawable/ic_search_donor" />
+
+            <ImageView
+                android:id="@+id/ivBloodNeeded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ivSearchDonor"
+                app:layout_constraintTop_toBottomOf="@+id/separator2"
+                app:srcCompat="@drawable/ic_blood_needed" />
+
+            <TextView
+                android:id="@+id/tvTitleSearchDonor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                style="@style/titleMenu"
+                android:text="@string/search_donor"
+                app:layout_constraintEnd_toEndOf="@+id/ivSearchDonor"
+                app:layout_constraintStart_toStartOf="@+id/ivSearchDonor"
+                app:layout_constraintTop_toBottomOf="@+id/ivSearchDonor" />
+
+            <TextView
+                android:id="@+id/tvDescSearchDonor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen4"
+                style="@style/subtitleMenu"
+                android:text="@string/search_donor_near_you"
+                app:layout_constraintEnd_toEndOf="@+id/tvTitleSearchDonor"
+                app:layout_constraintStart_toStartOf="@+id/tvTitleSearchDonor"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleSearchDonor" />
+
+            <TextView
+                android:id="@+id/tvTitleBloodNeeded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/titleMenu"
+                android:layout_marginTop="@dimen/dimen8"
+                android:text="@string/blood_needed"
+                app:layout_constraintEnd_toEndOf="@+id/ivBloodNeeded"
+                app:layout_constraintStart_toStartOf="@+id/ivBloodNeeded"
+                app:layout_constraintTop_toBottomOf="@+id/ivBloodNeeded" />
+
+            <TextView
+                android:id="@+id/tvDescNeedBlood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/subtitleMenu"
+                android:layout_marginTop="@dimen/dimen4"
+                android:text="@string/_4_users_need_blood"
+                app:layout_constraintEnd_toEndOf="@+id/tvTitleBloodNeeded"
+                app:layout_constraintStart_toStartOf="@+id/tvTitleBloodNeeded"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleBloodNeeded" />
+
+            <ImageView
+                android:id="@+id/ivMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen24"
+                style="@style/titleMenu"
+                app:layout_constraintEnd_toStartOf="@+id/ivDonorHistory"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescSearchDonor"
+                app:srcCompat="@drawable/ic_message"/>
+
+            <ImageView
+                android:id="@+id/ivDonorHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ivMessage"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescNeedBlood"
+                app:srcCompat="@drawable/ic_donor_history" />
+
+            <TextView
+                android:id="@+id/tvTitleMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/titleMenu"
+                android:layout_marginTop="@dimen/dimen8"
+                android:text="@string/message"
+                app:layout_constraintEnd_toEndOf="@+id/ivMessage"
+                app:layout_constraintStart_toStartOf="@+id/ivMessage"
+                app:layout_constraintTop_toBottomOf="@+id/ivMessage" />
+
+            <TextView
+                android:id="@+id/tvDescMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen4"
+                android:layout_marginBottom="@dimen/dimen32"
+                style="@style/subtitleMenu"
+                android:text="@string/_5_new_messages"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvTitleMessage"
+                app:layout_constraintStart_toStartOf="@+id/tvTitleMessage"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleMessage" />
+
+            <TextView
+                android:id="@+id/tvTitleDonorHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8"
+                style="@style/titleMenu"
+                android:text="@string/donor_history"
+                app:layout_constraintEnd_toEndOf="@+id/ivDonorHistory"
+                app:layout_constraintStart_toStartOf="@+id/ivDonorHistory"
+                app:layout_constraintTop_toBottomOf="@+id/ivDonorHistory" />
+
+            <TextView
+                android:id="@+id/tvDescDonorHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen4"
+                style="@style/subtitleMenu"
+                android:layout_marginBottom="@dimen/dimen32"
+                android:text="@string/_5_gives_2_received"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvTitleDonorHistory"
+                app:layout_constraintStart_toStartOf="@+id/tvTitleDonorHistory"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleDonorHistory" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
